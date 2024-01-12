@@ -18,4 +18,4 @@ function get_ip() {
 }
 
 get_ip "${url_array[@]}"
-sispopd --service-node --service-node-public-ip ${WANIP}--storage-server-port 22020 --seed-node 13.53.97.58
+sispopd --service-node --service-node-public-ip ${WANIP} --storage-server-port 22020 --seed-node 13.53.97.58
