@@ -32,9 +32,10 @@ RUN wget -O sispopnet.tar.gz $SISPOPNET_URL && \
 COPY sispop_init.sh /sispop_init.sh
 COPY storage_init.sh /storage_init.sh
 COPY sispopnet_init.sh /sispopnet_init.sh
+COPY sispopnet.ini /sispopnet.ini
 
 # Set privilages
-RUN chmod 755 /sispop_init.sh /storage_init.sh /sispopnet_init.sh
+RUN chmod 755 /sispop_init.sh /storage_init.sh /sispopnet_init.sh /sispopnet.ini
 
 # Supervisord
 RUN mkdir -p /var/log/supervisor
