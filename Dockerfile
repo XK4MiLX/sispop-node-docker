@@ -39,6 +39,6 @@ RUN chmod 755 /sispop_init.sh /storage_init.sh /sispopnet_init.sh /sispopnet.ini
 
 # Supervisord
 RUN mkdir -p /var/log/supervisor
-RUN mkdir -p /logs
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+WORKDIR /logs
 ENTRYPOINT ["/usr/bin/supervisord"]
