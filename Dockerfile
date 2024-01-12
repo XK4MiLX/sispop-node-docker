@@ -17,15 +17,15 @@ WORKDIR /tmp/downloads
 RUN apt-get update && \
     apt-get install -y wget && \
     wget -O sispop.tar.gz $SISPOP_URL && \
-    tar -xzvf sispop.tar.gz -C /usr/local/bin && \
+    tar -xzvf sispop.tar.gz -C /usr/local/bin --strip-components=1 && \
     rm sispop.tar.gz
 # Download and unpack Storage Server
 RUN wget -O storage.tar.gz $STORAGE_URL && \
-    tar -xzvf storage.tar.gz -C /usr/local/bin && \
+    tar -xzvf storage.tar.gz -C /usr/local/bin --strip-components=1 && \
     rm storage.tar.gz
 # Download and unpack Sispopnet
 RUN wget -O sispopnet.tar.gz $SISPOPNET_URL && \
-    tar -xzvf sispopnet.tar.gz -C /usr/local/bin && \
+    tar -xzvf sispopnet.tar.gz -C /usr/local/bin --strip-components=1 && \
     rm sispopnet.tar.gz
 
 # Copy init scripts
