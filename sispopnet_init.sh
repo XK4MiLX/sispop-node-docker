@@ -9,8 +9,10 @@ if [[ ! -d /root/.sispopnet ]]; then
     cp bootstrap.signed self.signed
   fi
 fi
-echo -e "Awaiting.."
-sleep 200
+if [[ "$1" != "bypass" ]]; then
+  echo -e "Awaiting.."
+  sleep 180
+fi
 echo -e "Starting sispopnet.."
 echo -e "----------------------------------------------------------------------------------------------------"
 sispopnet
