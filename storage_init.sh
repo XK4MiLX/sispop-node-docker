@@ -1,5 +1,5 @@
 #!/bin/bash
-echo -e "Initial awaiting.."
+echo -e "Awaiting.."
 sleep 120
 echo -e "Starting storage.."
 echo -e "----------------------------------------------------------------------------------------------------"
