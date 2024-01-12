@@ -4,4 +4,5 @@ if [[ ! -d /root/.sispopnet ]]; then
   cp /sispopnet.ini /root/.sispopnet/sispopnet.ini
   wget https://seed.sispop.site/bootstrap.signed
 fi
+sleep 240
 sispopnet
