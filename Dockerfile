@@ -5,7 +5,7 @@ ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update && \
   apt-get upgrade -y && \
-  apt-get install -y wget jq bc supervisor curl nano 
+  apt-get install -y wget supervisor curl nano 
   
 # Set environment variables
 ENV SISPOP_URL="https://github.com/sispop-dev/sispop/releases/download/v10.0.3/sispop-10.0.3.tar.gz"
