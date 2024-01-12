@@ -37,5 +37,5 @@ RUN chmod 755 /sispop_init.sh /storage_init.sh /sispopnet_init.sh /sispopnet.ini
 RUN mkdir -p /var/log/supervisor
 WORKDIR /logs
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
-HEALTHCHECK --start-period=10m --interval=5m --retries=5 --timeout=40s CMD ./health.sh
+HEALTHCHECK --start-period=10m --interval=5m --retries=5 --timeout=40s CMD /health.sh
 ENTRYPOINT ["/usr/bin/supervisord"]
