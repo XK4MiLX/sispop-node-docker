@@ -22,4 +22,4 @@ docker run -d -p 22020:22020 -p 22021:22021 -p 20000:20000 -p 50000:50000 -p 109
 2024-01-13 10:25:48.479 I Storage last ping time is within acceptable range: 66 seconds.
 ```
 ## Notice
-Acceptable range of ping is 305 milliseconds after that, the component is restarted.
+Acceptable range of ping is 305 milliseconds after that the component is restarted.
