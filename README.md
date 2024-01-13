@@ -33,7 +33,7 @@ docker exec -it sispop-node sispopd prepare_registration
 Current staking requirement: 150000.000000000 sispop
 Will the operator contribute the entire stake? (Y/Yes/N/No/C/Cancel): Y
 
-Enter the sispop address for the solo staker (B/Back/C/Cancel): 46pFUxroeo6XpQNCZCnoMmjAJorP6WL5tgoiytXXMdCZYXbuPSpot1kPt2DzRD4zHQ6LwFVLYRyRsNfm3uDasxUQT6BbFq3
+Enter the sispop address for the solo staker (B/Back/C/Cancel): 46pFUxroeo6XpQNCZCnoMmjAJorP6WL5tg4fetXXMdCZYXbuPSpot1kPt2DzRD4zHQ6LwFVLYRyRsNfm3uDasxUQT6BbFq3
 Summary:
 Operating costs as % of reward: 100%
 Contributor     Address  Contribution       Contribution(%)
