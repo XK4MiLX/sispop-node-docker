@@ -21,7 +21,7 @@ echo \
 sudo apt-get update
 sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
-## Run Docker
+## Run Continer
 - Create directory for bind mount
 ```sh
 mkdir /home/$USER/sispop-node
