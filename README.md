@@ -7,6 +7,7 @@
   
 
 ## Run Docker
+Initial setup
 ```sh
 mkdir /home/$USER/sispop-node
 ```
