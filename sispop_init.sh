@@ -18,6 +18,7 @@ function get_ip() {
 }
 
 get_ip "${url_array[@]}"
+sleep 10
 echo -e "Starting daemon.."
 echo -e "CMD: sispopd --service-node --service-node-public-ip ${WANIP} --storage-server-port 22020 --seed-node 13.53.97.58"
 echo -e "-----------------------------------------------------------------------------------------------------------------------"
