@@ -39,8 +39,9 @@ echo -e "$(date '+%Y-%m-%d %H:%M:%S.%3N') I ------------------------------------
 echo -e "$(date '+%Y-%m-%d %H:%M:%S.%3N') I $output"  >> /proc/1/fd/1
 
 IFS=, read -ra time_parts <<< "$output"
-storage_time=$(extract_time "${time_parts[2]}")
-sispopnet_time=$(extract_time "${time_parts[3]}")
+array_size=${#time_parts[@]}
+storage_time=$(extract_time "${time_parts[$array_size-2]}")
+sispopnet_time=$(extract_time "${time_parts[$array_size-1]}")
 
 if [[ "$sispopnet_time" != "" && "$storage_time" != "" ]]; then
   if [[ "$sispopnet_time" -ge $PING_LIMIT ]]; then
