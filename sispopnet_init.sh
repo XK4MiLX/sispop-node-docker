@@ -11,7 +11,7 @@ if [[ ! -d /root/.sispopnet ]]; then
 fi
 if [[ "$1" != "bypass" ]]; then
   echo -e "Awaiting.."
-  sleep 180
+  sleep 150
 fi
 echo -e "Starting sispopnet.."
 echo -e "----------------------------------------------------------------------------------------------------"
