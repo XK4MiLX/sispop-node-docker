@@ -27,5 +27,31 @@ docker logs sispop-node --tail 3
 ```sh
 docker exec -it sispop-node sispopd prepare_registration
 ```
+```sh
+2024-01-13 18:10:37.118 I Sispop 'Sweet Water' (v10.0.3-8d194d71d)
+2024-01-13 18:10:37.126 I Generating SSL certificate
+Current staking requirement: 150000.000000000 sispop
+Will the operator contribute the entire stake? (Y/Yes/N/No/C/Cancel): Y
+
+Enter the sispop address for the solo staker (B/Back/C/Cancel): 46pFUxroeo6XpQNCZCnoMmjAJorP6WL5tgoiytXXMdCZYXbuPSpot1kPt2DzRD4zHQ6LwFVLYRyRsNfm3uDasxUQT6BbFq3
+Summary:
+Operating costs as % of reward: 100%
+Contributor     Address  Contribution       Contribution(%)
+___________     _______  ____________       _______________
+Operator        46pFUx   150000.000000000   100.000000000
+
+Because the actual requirement will depend on the time that you register, the
+amounts shown here are used as a guide only, and the percentages will remain
+the same.
+
+Do you confirm the information above is correct? (Y/Yes/N/No/B/Back/C/Cancel): Y
+Run this command in the wallet that will fund this registration:
+
+register_service_node 18446744073709551612 46pFUxroeo6XpQN3rnoMmjAJorP6WL5tgoiytXXMdCZYXbuPSpot1kPt2DzGD4zHQ6LwFVLYRyRsNfm3uDasxUQT6BbFq3 18446766073709551612 1704479112 3fcea4a26e695ad8243e45f92fda775bcfae0eded2270bb13a120ae7f85b748c bd55dc43ea5d26821855cbf75876e4b2cdcaca6r35f1798a141c81bc4cf25040d860a77cb115e0f8e01c61dba22703a0975e86bd847fd2f6720fa4fd709a2a903
+
+This registration expires at 2024-01-27 06:11:52 PM UTC.
+This should be in about 2 weeks, if it isn't, check this computer's clock.
+Please submit your registration into the blockchain before this time or it will be invalid.
+```
 ## Notice
 Acceptable range of ping is 305 milliseconds after that the component is restarted.
