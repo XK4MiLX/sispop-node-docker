@@ -28,7 +28,6 @@ uptime=$(echo "$status" | grep -oP 'uptime \K[0-9]+d [0-9]+h [0-9]+m [0-9]+s')
 output="$height ($percentage), $sn_part"
 
 if [[ $output == "" ]]; then
- echo -e "$(date '+%Y-%m-%d %H:%M:%S.%3N') I --------------------------------------------------"
  echo -e "$(date '+%Y-%m-%d %H:%M:%S.%3N') I ERROR: Unable to parse sispopd status"  
  echo -e "$(date '+%Y-%m-%d %H:%M:%S.%3N') I --------------------------------------------------" >> /proc/1/fd/1
  echo -e "$(date '+%Y-%m-%d %H:%M:%S.%3N') I ERROR: Unable to parse sispopd status"   >> /proc/1/fd/1
