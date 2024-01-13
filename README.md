@@ -7,7 +7,7 @@
   
 
 ## Run Docker
-Initial setup
+Create directory for bind mount
 ```sh
 mkdir /home/$USER/sispop-node
 ```
