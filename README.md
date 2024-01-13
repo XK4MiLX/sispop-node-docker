@@ -5,6 +5,10 @@
 - 1GB Ram
 - 8GB SSD
 
+## Firewall
+```sh
+sudo ufw allow 22020 && sudo ufw allow 22021 && sudo ufw allow 20000 && sudo ufw allow 50000 && sudo ufw allow 1090
+```
 ## Install Docker
 ```sh
 sudo apt-get update
