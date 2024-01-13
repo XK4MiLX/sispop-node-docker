@@ -55,4 +55,5 @@ Please submit your registration into the blockchain before this time or it will 
 ```
 ## Notice
 Acceptable range of ping is 305 milliseconds after that the component is restarted.
-It can be changed by custom value using ``-e PING_LIMIT=400``
+It can be changed by custom value using:
+``-e PING_LIMIT=400``
