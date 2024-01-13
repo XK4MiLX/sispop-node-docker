@@ -25,7 +25,7 @@ docker logs sispop-node --tail 3
 ```
 ## Prepare Registration
 ```sh
-docker exec -it fluxsispop-node sispopd prepare_registration
+docker exec -it sispop-node sispopd prepare_registration
 ```
 ## Notice
 Acceptable range of ping is 305 milliseconds after that the component is restarted.
