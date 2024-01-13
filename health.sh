@@ -23,14 +23,20 @@ status=$(sispopd status)
 height=$(echo "$status" | grep -oP 'Height: \S+')
 percentage=$(echo "$status" | grep -oP '(\d+\.\d+)%')
 sn_part=$(echo "$status" | grep -oP 'SN: \K.*' | cut -d' ' -f2-)
+uptime=$(echo "$status" | grep -oP 'uptime \K[0-9]+d [0-9]+h [0-9]+m [0-9]+s')
 output="$height ($percentage), $sn_part"
-echo -e "$output"
-echo -e "$(date '+%Y-%m-%d %H:%M:%S.%3N') I --------------------------------------------------" >> /proc/1/fd/1
-echo -e "$(date '+%Y-%m-%d %H:%M:%S.%3N') I $output"  >> /proc/1/fd/1
 
 if [[ $output == "" ]]; then
+ echo -e "$(date '+%Y-%m-%d %H:%M:%S.%3N') I --------------------------------------------------"
+ echo -e "$(date '+%Y-%m-%d %H:%M:%S.%3N') I ERROR: Unable to parse sispopd status"  
+ echo -e "$(date '+%Y-%m-%d %H:%M:%S.%3N') I --------------------------------------------------" >> /proc/1/fd/1
+ echo -e "$(date '+%Y-%m-%d %H:%M:%S.%3N') I ERROR: Unable to parse sispopd status"   >> /proc/1/fd/1
  exit 1
 fi
+
+echo -e "$output, uptime: $uptime"
+echo -e "$(date '+%Y-%m-%d %H:%M:%S.%3N') I --------------------------------------------------" >> /proc/1/fd/1
+echo -e "$(date '+%Y-%m-%d %H:%M:%S.%3N') I $output"  >> /proc/1/fd/1
 
 IFS=, read -ra time_parts <<< "$output"
 storage_time=$(extract_time "${time_parts[2]}")
