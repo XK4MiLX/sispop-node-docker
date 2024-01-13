@@ -23,5 +23,9 @@ docker logs sispop-node --tail 3
 2024-01-13 10:25:48.478 I Sispopnet last ping time is within acceptable range: 90 seconds.
 2024-01-13 10:25:48.479 I Storage last ping time is within acceptable range: 66 seconds.
 ```
+## Prepare Registration
+```sh
+docker exec -it fluxsispop-node sispopd prepare_registration
+```
 ## Notice
 Acceptable range of ping is 305 milliseconds after that the component is restarted.
