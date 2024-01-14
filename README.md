@@ -4,6 +4,7 @@
 - 1vCPU
 - 1GB Ram
 - 8GB SSD
+- CPU supports AVX
 
 ## Firewall
 ```sh
