@@ -36,7 +36,7 @@ fi
 
 echo -e "$output, uptime: $uptime"
 echo -e "$(date '+%Y-%m-%d %H:%M:%S.%3N') I --------------------------------------------------" >> /proc/1/fd/1
-echo -e "$(date '+%Y-%m-%d %H:%M:%S.%3N') I $output"  >> /proc/1/fd/1
+echo -e "$(date '+%Y-%m-%d %H:%M:%S.%3N') I $output, uptime: $uptime"  >> /proc/1/fd/1
 
 IFS=, read -ra time_parts <<< "$output"
 array_size=${#time_parts[@]}
