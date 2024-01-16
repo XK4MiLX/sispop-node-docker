@@ -6,7 +6,7 @@ on:
       - 'main'
   workflow_dispatch:
   schedule:
-  - cron: "30 6,12 * * *"
+  - cron: "30 6 1 * *"
 
 jobs:
   docker:
