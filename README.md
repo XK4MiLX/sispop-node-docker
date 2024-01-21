@@ -80,10 +80,10 @@ Please submit your registration into the blockchain before this time or it will 
   docker stop sispop-node
   docker rm sispop-node
   docker pull xk4milx/sispop-node-docker:latest
-  docker run -d -p 22020:22020 -p 22021:22021 -p 20000:20000 -p 50000:50000 -p 1090:1090/udp --device=/dev/net/tun --cap-add=NET_ADMIN --restart=always -v /home/$USER/sispop-node:/root --name 'sispop-node' xk4milx/sispop-node-docker:latest
-  docker exec -it fluxsispop-node supervisorctl stop all
-  docker exec -it fluxsispop-node mv /root/.sispop/lmdb /root/.sispop/lmdb_old
-  docker exec -it fluxsispop-node supervisorctl start all
+  docker run -d -p 22020:22020 -p 22021:22021 -p 20000:20000 -p 50000:50000 -p 30000:30000 -p 1090:1090/udp --device=/dev/net/tun --cap-add=NET_ADMIN --restart=always -v /home/$USER/sispop-node:/root --name 'sispop-node' xk4milx/sispop-node-docker:latest
+  docker exec -it sispop-node supervisorctl stop all
+  docker exec -it sispop-node mv /root/.sispop/lmdb /root/.sispop/lmdb_old
+  docker exec -it xsispop-node supervisorctl start all
 ```
 ## Notice
 Acceptable range of ping is 305 milliseconds after that the component is restarted.
