@@ -75,7 +75,7 @@ This registration expires at 2024-01-27 06:11:52 PM UTC.
 This should be in about 2 weeks, if it isn't, check this computer's clock.
 Please submit your registration into the blockchain before this time or it will be invalid.
 ```
-## Update Info
+## Update
 ```sh
 bash -i <(curl -s https://raw.githubusercontent.com/XK4MiLX/sispop-node-docker/master/update.sh)
 ```
