@@ -10,7 +10,7 @@
 ```sh
 sudo ufw allow 22020 && sudo ufw allow 22021 && sudo ufw allow 20000 && sudo ufw allow 50000 && sudo ufw allow 1090
 ```
-## Install Docker
+## Install Docker (Root)
 ```sh
 sudo apt-get update -y
 sudo apt-get install -y ca-certificates curl gnupg
@@ -26,7 +26,7 @@ echo \
 sudo apt-get update
 sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
-## Run Continer
+## Run Continer (User)
 - Create directory for bind mount
 ```sh
 mkdir /home/$USER/sispop-node
