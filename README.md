@@ -12,7 +12,7 @@ sudo ufw allow 22020 && sudo ufw allow 22021 && sudo ufw allow 20000 && sudo ufw
 ```
 ## Install Docker
 ```sh
-sudo apt-get update
+sudo apt-get update -y
 sudo apt-get install -y ca-certificates curl gnupg
 sudo install -m 0755 -d /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
